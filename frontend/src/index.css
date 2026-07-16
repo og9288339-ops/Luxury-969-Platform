@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#0a0a0a] text-gray-100 antialiased selection:bg-amber-500 selection:text-black;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .luxury-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl rounded-2xl transition-all duration-500;
+  }
+
+  .luxury-btn {
+    @apply px-8 py-3 bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-amber-500 text-black font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(217,119,6,0.3)];
+  }
+}
+
+@layer utilities {
+  .text-gold-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-amber-200 via-amber-400 to-amber-700;
+  }
+}
+
+
+.filter-icon:hover {
+  stroke: #eab308; /* لون ذهبي */
+  transform: rotate(90deg);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.search-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-icon:hover {
+  transform: scale(1.15) rotate(5deg);
+  stroke: #ffffff; /* يتوهج باللون الأبيض */
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.slider-icon {
+  transition: all 0.3s ease;
+}
+
+.slider-icon:active {
+  transform: translateY(2px);
+  stroke: #fbbf24; /* لون ذهبي دافئ */
+}
+
+.slider-icon circle {
+  fill: transparent;
+  transition: fill 0.3s ease;
+}
+
+.slider-icon:hover circle {
+  fill: currentColor; /* بتتملي باللون عند الوقوف بالماوس */
+}
+
+
+.grid-icon {
+  transition: all 0.4s ease;
+  opacity: 0.7;
+}
+
+.grid-icon:hover {
+  opacity: 1;
+  stroke: #ffffff;
+  /* تأثير ضوئي خفيف */
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+.grid-icon:active {
+  transform: scale(0.9); /* إيحاء بالضغط الفعلي */
+}
+
+.list-icon {
+  transition: all 0.3s ease;
+  stroke: rgba(255, 255, 255, 0.6); /* لون غير صارخ لزيادة الوقار */
+}
+
+.list-icon:hover {
+  stroke: #ffffff; /* يتحول للأبيض الساطع عند التفاعل */
+  transform: translateX(-2px); /* حركة خفيفة للداخل توحي بالاستجابة */
+}
+
+/* لو تم اختيار الـ List مود */
+.list-icon.active {
+  stroke: #fbbf24; /* الذهب الملكي عند التفعيل */
+}
+
+.sparkles-icon {
+  transition: all 0.5s ease;
+  opacity: 0.5; /* مظهر خافت ووقور */
+}
+
+.sparkles-icon:hover {
+  opacity: 1;
+  stroke: #fbbf24; /* وميض ذهبي خفيف */
+  /* جعل النجمة تدور دوران بطيء جداً وغير ملاحظ */
+  animation: rotate-slow 10s linear infinite;
+}
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

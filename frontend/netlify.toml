@@ -1,0 +1,29 @@
+[build]
+<<<<<<< HEAD
+  # بما أننا حددنا Base directory بـ frontend في الإعدادات
+  # فإحنا مش محتاجين نستخدم cd في الأمر
+=======
+>>>>>>> 03fa4e2af4bf5a28d00cf2ee0272f3ab3ae343f2
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+<<<<<<< HEAD
+  # ده بيمنع أي تضارب في النسخ
+  NODE_VERSION = "20" 
+
+# إعدادات الـ Redirects عشان الـ SPA (زي React/Vite) تشتغل صح مع الـ Refresh
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+=======
+  
+  NODE_VERSION = "20" 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+>>>>>>> 03fa4e2af4bf5a28d00cf2ee0272f3ab3ae343f2
